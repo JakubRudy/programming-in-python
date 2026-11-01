@@ -12,7 +12,7 @@ jobs:
       - name: programming-in-python
         uses: actions/checkout@v7
 
-      - name: Konfiguracja Pythona
+      - name: Python configuration
         uses: actions/setup-python@v7
         with:
           python-version: "3.13"
@@ -20,8 +20,8 @@ jobs:
       - name: Instalacja Ruff
         run: pip install ruff
 
-      - name: Sprawdzenie jakości kodu
+      - name: Code quality check
         run: ruff check .
 
-      - name: Sprawdzenie formatowania
+      - name: Format check
         run: ruff format --check .
